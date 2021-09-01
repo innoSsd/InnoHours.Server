@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="InnoHours.Server.Program">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Startup">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Authentication.Jwt.JwtHeader">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAQAAAA=</HashCode>
+      <FileName>Authentication\Jwt\JwtHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Authentication.Jwt.JwtPayload">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAggAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Authentication\Jwt\JwtPayload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Authentication.JwtHandler">
+    <Position X="0.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Authentication\JwtHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Authentication.UserAuthenticator" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Authentication\UserAuthenticator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InnoHours.Server.Controllers.AuthController">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.AssignedGroup">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Database\Models\AssignedGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.Course">
+    <Position X="12.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Models\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.Group">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAE=</HashCode>
+      <FileName>Database\Models\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.Professor">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAACAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Database\Models\Professor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.ProfessorType">
+    <Position X="10.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Models\ProfessorType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.Models.Student">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAEACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Models\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.MainDbContext">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Database\MainDBContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.DataBase.UsersDbContext">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAgAAAAAAAAAAQQQAAAADA=</HashCode>
+      <FileName>Database\UsersDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Middleware.JwtMiddleware">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAABAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Middleware\JwtMiddleware.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InnoHours.Server.Settings.AppSettings">
+    <Position X="3.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Settings\AppSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="InnoHours.Server.Authentication.IUserAuthenticator">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Authentication\IUserAuthenticator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
