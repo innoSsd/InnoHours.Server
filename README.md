@@ -1,5 +1,10 @@
 # InnoHours.Server
-Server for mobile app
+This is server for mobile app
+
+# Content
+* Technical Stack
+* Non-functional Requirment
+* Class Diagram
 
 ## Technical Stack
 * Heroku hosting server   
