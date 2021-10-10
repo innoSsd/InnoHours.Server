@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -37,7 +36,8 @@ namespace InnoHours.Server.Authentication.Annotations
                             {
                                 new Claim("Email", student.Email),
                                 new Claim("Name", student.FullName),
-                                new Claim("Group", student.GroupId),
+                                new Claim("Grade", student.Grade),
+                                new Claim("Group", student.Group),
                                 new Claim("Id", student.Id)
                             }
                         )
@@ -58,7 +58,7 @@ namespace InnoHours.Server.Authentication.Annotations
                                 new Claim("Email", professor.Email),
                                 new Claim("Name", professor.FullName),
                                 new Claim("Id", professor.Id)
-                            }.Concat(professor.AssignedGroups.Select(groupId => new Claim("Group", groupId)))
+                            }
                         )
                     );
                     break;

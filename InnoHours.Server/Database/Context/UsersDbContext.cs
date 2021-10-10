@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using InnoHours.Server.DataBase.Models;
+using InnoHours.Server.Database.Models.Professor;
+using InnoHours.Server.Database.Models.Student;
 using MongoDB.Driver;
 
-namespace InnoHours.Server.DataBase
+namespace InnoHours.Server.Database.Context
 {
     public class UsersDbContext
     {

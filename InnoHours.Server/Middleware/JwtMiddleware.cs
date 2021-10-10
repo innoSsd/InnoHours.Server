@@ -18,7 +18,7 @@ namespace InnoHours.Server.Middleware
 
         public async Task InvokeAsync(HttpContext context, JwtHandler jwtHandler)
         {
-            var token = context.Request.Headers["authorization"].FirstOrDefault();
+            var token = context.Request.Headers["Authorization"].FirstOrDefault();
             var tokenValidation = jwtHandler.ValidateToken(token, out var userId);
             context.Items["token_validation"] = tokenValidation;
             context.Items["user_id"] = userId;

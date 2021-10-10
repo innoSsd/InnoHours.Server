@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using InnoHours.Server.Authentication;
-using InnoHours.Server.Authentication.Annotations;
 using InnoHours.Server.Models.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,13 +16,6 @@ namespace InnoHours.Server.Controllers
         {
             _jwtHandler = handler;
             _authenticator = authenticator;
-        }
-
-        [HttpGet]
-        [JwtAuthorized(UserRole = UserRole.Professor)]
-        public ActionResult Hello()
-        {
-            return Ok("HELLO WORLD!!!! " + HttpContext.User.Claims.First(claim => claim.Type == "Id").Value);
         }
 
         [HttpPost]

@@ -2,7 +2,8 @@
 using System.Security.Cryptography;
 using System.Text;
 using InnoHours.Server.Authentication.Jwt;
-using InnoHours.Server.DataBase.Models;
+using InnoHours.Server.Database.Models.Professor;
+using InnoHours.Server.Database.Models.Student;
 using InnoHours.Server.Settings;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;

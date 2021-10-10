@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
-using InnoHours.Server.DataBase;
-using InnoHours.Server.DataBase.Models;
+using InnoHours.Server.Database.Context;
+using InnoHours.Server.Database.Models.Professor;
+using InnoHours.Server.Database.Models.Student;
 
 namespace InnoHours.Server.Authentication
 {

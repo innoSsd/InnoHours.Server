@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace InnoHours.Server.DataBase
+namespace InnoHours.Server.Database.Context
 {
     public class MainDbContext
     {

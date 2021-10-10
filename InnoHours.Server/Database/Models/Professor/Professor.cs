@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace InnoHours.Server.DataBase.Models
+namespace InnoHours.Server.Database.Models.Professor
 {
     public class Professor
     {
@@ -19,6 +19,19 @@ namespace InnoHours.Server.DataBase.Models
         public string FullName { get; set; }
 
         [BsonElement("assigned_groups")]
-        public IList<string> AssignedGroups { get; set; }
+        public IList<AssignedGroup> AssignedGroups { get; set; }
+
+        [BsonElement("office_hours")]
+        public IList<OfficeHours> OfficeHours { get; set; }
+
+        [BsonElement("office_hours_requests")]
+        public IList<OfficeHoursRequest> OfficeHoursRequests { get; set; }
+
+        [BsonElement("allow_requests")]
+        public bool AllowRequests { get; set; }
+
+        [BsonElement("can_open_office_hours")]
+        public bool CanOpenOfficeHours { get; set; }
+
     }
 }

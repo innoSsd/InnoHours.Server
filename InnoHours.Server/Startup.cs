@@ -1,5 +1,5 @@
 using InnoHours.Server.Authentication;
-using InnoHours.Server.DataBase;
+using InnoHours.Server.Database.Context;
 using InnoHours.Server.Middleware;
 using InnoHours.Server.Settings;
 using Microsoft.AspNetCore.Builder;
@@ -25,6 +25,8 @@ namespace InnoHours.Server
             services.AddControllers();
             services.AddSingleton<MainDbContext>();
             services.AddSingleton<UsersDbContext>();
+            services.AddSingleton<ScheduleDbContext>();
+            services.AddSingleton<OfficeHoursDbContext>();
             services.AddSingleton<IUserAuthenticator, UserAuthenticator>();
             services.AddSingleton<JwtHandler>();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
@@ -55,7 +57,7 @@ namespace InnoHours.Server
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}");
             });
         }
     }
