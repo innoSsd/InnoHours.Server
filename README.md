@@ -15,5 +15,5 @@ This is server for mobile app
 ## Non-functional Requirment <a name="Non-functional_Requirment"></a>
 The server must respond in less than 200ms to any request   
 
-## Link to Swager AI <a name="Link"></a>   
+## Link to Swager UI <a name="Link"></a>   
 [Documentation](https://innohours-server.herokuapp.com/swagger/index.html)
