@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace InnoHours.Server
 {
@@ -30,6 +31,14 @@ namespace InnoHours.Server
             services.AddSingleton<IUserAuthenticator, UserAuthenticator>();
             services.AddSingleton<JwtHandler>();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Api V1",
+                    Version = "v1"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,8 +59,13 @@ namespace InnoHours.Server
 
             app.UseMiddleware<JwtMiddleware>();
 
-            
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("v1/swagger.json", "My Api V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
