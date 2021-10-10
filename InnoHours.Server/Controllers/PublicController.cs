@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using InnoHours.Server.Database.Context;
 using InnoHours.Server.Models.Public;
+using InnoHours.Server.Models.Schedule;
 
 namespace InnoHours.Server.Controllers
 {
@@ -23,6 +24,16 @@ namespace InnoHours.Server.Controllers
             return new AvailableGroupsResponse
             {
                 Groups = groups.Groups
+            };
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<CommonScheduleResponse>> GetSchedule()
+        {
+            var commonScheduleResult = await _scheduleContext.GetCommonScheduleAsync();
+            return new CommonScheduleResponse
+            {
+                Schedule = commonScheduleResult
             };
         }
     }

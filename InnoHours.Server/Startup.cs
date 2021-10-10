@@ -1,3 +1,4 @@
+using System.Text.Json;
 using InnoHours.Server.Authentication;
 using InnoHours.Server.Database.Context;
 using InnoHours.Server.Middleware;

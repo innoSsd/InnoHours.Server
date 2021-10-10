@@ -21,8 +21,8 @@
     <Folder Include="Middleware\" />
     <Folder Include="Models\Authentication\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Models\Schedule\" />
     <Folder Include="Models\Public\" />
-    <Folder Include="OfficeHours\" />
     <Folder Include="Settings\" />
   </ItemGroup>
 

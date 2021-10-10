@@ -14,7 +14,7 @@ namespace InnoHours.Server.Database.Models.Schedule
         [BsonElement("time_start")]
         public string TimeStart { get; set; }
 
-        [BsonElement("TimeEnd")]
+        [BsonElement("time_end")]
         public string TimeEnd {  get; set; }
 
         [BsonElement("grade")]

@@ -6,6 +6,7 @@ using InnoHours.Server.Database.Data.Schedule;
 using InnoHours.Server.Database.Data.Schedule.Common;
 using InnoHours.Server.Database.Data.Schedule.Single;
 using InnoHours.Server.Database.Models.Schedule;
+using InnoHours.Server.Extensions;
 using MongoDB.Driver;
 
 namespace InnoHours.Server.Database.Context
@@ -36,18 +37,18 @@ namespace InnoHours.Server.Database.Context
                 CourseName = schedule.Course.CourseName,
                 ProfessorType = schedule.Course.LessonType switch
                 {
-                    "lecture" => "lector",
-                    "tutorial" => "tutor",
-                    "lab" => "ta",
+                    "Lecture" => "Lector",
+                    "Tutorial" => "Tutor",
+                    "Lab" => "TA",
                     _ => throw new ArgumentException($"Unknown lesson type {schedule.Course.LessonType}"),
                 }
-            });
+            }).DistinctBy(professor => professor.ProfessorId);
         }
 
         public async Task<ScheduleSingleGroup> GetScheduleForGroupAsync(string grade, string group)
         {
             var scheduleCursor =
-                await _scheduleCollection.FindAsync(schedule => schedule.Grade == group && schedule.Group == group);
+                await _scheduleCollection.FindAsync(schedule => schedule.Grade == grade && schedule.Group == group);
             var schedule = await scheduleCursor.ToListAsync();
             var scheduleGroupedByDay = schedule.GroupBy(schedule1 => schedule1.Day);
             return new ScheduleSingleGroup
